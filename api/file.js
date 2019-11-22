@@ -19,7 +19,7 @@ function getFile(stream) {
         let buffers = [];
         stream.on('data', function(data) {
             buffers.push(data);
-        })
+        });
         stream.on('end', function() {
             let buffer = Buffer.concat(buffers);
             let workbook = xlsx.read(buffer, {type: 'buffer'});
