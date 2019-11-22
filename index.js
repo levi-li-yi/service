@@ -22,16 +22,15 @@ app.use(cors());
 app.listen(3000,()=>{
     console.log('[Server] starting at port 3000')
 })
-/*
-;(async () => {
+/*;(async () => {
     await connect()
-    /!*initShcemas()
+    initShcemas()
     const User = mongoose.model('User')
-    let oneUser = new User({userName: 'js', password: '123456'})
+    let oneUser = new User({userName: 'mack', password: '123456'})
     oneUser.save().then(() => {
         console.log('插入成功')
     })
-    let  users = await  User.findOne({}).exec()*!/
+    let  users = await  User.findOne({}).exec()
     console.log('------------------')
     //console.log(users)
     console.log('------------------')
