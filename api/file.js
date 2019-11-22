@@ -12,7 +12,7 @@ modules.exports = function batchInsertFile(formData) {
         datas.push(data);
     }
     return datas
-}
+};
 
 function getFile(stream) {
     return new Promise((resolve) => {
