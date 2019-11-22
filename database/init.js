@@ -21,7 +21,7 @@ exports.connect = ()=>{
                 reject()
                 throw new Error('数据库异常')
             }
-        })
+        });
         //数据库出现错误的时候
         mongoose.connection.on('error', err=>{
             if (maxConnectTimes < 3) {
@@ -32,7 +32,7 @@ exports.connect = ()=>{
                 reject()
                 throw new Error('数据库异常')
             }
-        })
+        });
 
         //链接打开的时候
         mongoose.connection.once('open',()=>{
