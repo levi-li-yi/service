@@ -4,16 +4,11 @@ const app = new Koa();
 const mongoose = require('mongoose');
 const {connect, initShcemas} = require('./database/init.js');
 
-const Router = require('koa-router');
-let user = require('./api/user.js');
-
 const bodyParser = require('koa-bodyparser');
 
 const cors = require('koa2-cors');
 
-// 路由注册
-let router = new Router();
-router.use('/user', user.routes());
+const router = require('./router/index.js')
 
 app.use(router.routes());
 app.use(router.allowedMethods());

@@ -11,6 +11,7 @@ modules.exports = function batchInsertFile(formData) {
         const data = xlsx.utils.sheet_add_json(worksheet);
         datas.push(data);
     }
+    return datas
 }
 
 function getFile(stream) {
