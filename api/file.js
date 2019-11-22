@@ -15,7 +15,7 @@ modules.exports = function batchInsertFile(formData) {
 }
 
 function getFile(stream) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         let buffers = [];
         stream.on('data', function(data) {
             buffers.push(data);
