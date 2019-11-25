@@ -8,7 +8,7 @@ const bodyParser = require('koa-bodyparser');
 
 const cors = require('koa2-cors');
 
-const router = require('./router/index.js')
+const router = require('./router/index.js');
 
 app.use(router.routes());
 app.use(router.allowedMethods());
@@ -21,7 +21,7 @@ app.use(cors());
 
 app.listen(3000,()=>{
     console.log('[Server] starting at port 3000')
-})
+});
 /*;(async () => {
     await connect()
     initShcemas()
